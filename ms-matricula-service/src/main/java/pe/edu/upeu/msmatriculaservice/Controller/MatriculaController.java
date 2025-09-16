@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/matricula")
-public class CursoController {
+public class MatriculaController {
     @Autowired
     MatriculaService matriculaService;
 

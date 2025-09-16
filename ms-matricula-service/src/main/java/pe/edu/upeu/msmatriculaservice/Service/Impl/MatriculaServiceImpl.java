@@ -2,9 +2,6 @@ package pe.edu.upeu.msmatriculaservice.Service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pe.edu.upeu.msMatriculaservice.Entity.Curso;
-import pe.edu.upeu.mscursoservice.Respository.CursoRepository;
-import pe.edu.upeu.mscursoservice.Service.CursoService;
 import pe.edu.upeu.msmatriculaservice.Entity.Matricula;
 import pe.edu.upeu.msmatriculaservice.Respository.MatriculaRepository;
 import pe.edu.upeu.msmatriculaservice.Service.MatriculaService;
@@ -16,6 +13,7 @@ import java.util.Optional;
 public class MatriculaServiceImpl implements MatriculaService {
     @Autowired
     private MatriculaRepository matriculaRepository;
+
     @Override
     public List<Matricula> listar() {
         return matriculaRepository.findAll();
