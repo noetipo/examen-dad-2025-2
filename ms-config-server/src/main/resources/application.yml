@@ -1,5 +1,5 @@
 server:
-  port: 7070
+  port: 7071
 spring:
   application:
     name: ms-config-server
@@ -7,6 +7,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/noetipo/DAD-2024-G1.git # ruta del repositorio git
+          uri: https://github.com/noetipo/examen-dad-2025-2.git # ruta del repositorio git
           searchPaths: config-data
           default-label: main
+  security:
+    user:
+      name: root
+      password: 123456
