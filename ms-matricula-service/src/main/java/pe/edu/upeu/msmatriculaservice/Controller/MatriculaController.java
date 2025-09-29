@@ -20,11 +20,11 @@ public class MatriculaController {
 
     @GetMapping("/{id}")
     public Matricula buscarPorId(@PathVariable Integer id) {
-        return matriculaService.buscarPorId(id).get();
+        return matriculaService.buscarPorId(id);
     }
 
     @PostMapping
-    public Matricula guardar(Matricula matricula) {
+    public Matricula guardar(@RequestBody Matricula matricula) {
         return matriculaService.guardar(matricula);
     }
 

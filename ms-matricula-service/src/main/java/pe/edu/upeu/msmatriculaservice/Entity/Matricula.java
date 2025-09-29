@@ -1,10 +1,10 @@
 package pe.edu.upeu.msmatriculaservice.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -15,4 +15,8 @@ public class Matricula {
     private Integer id;
     private String nombreAlumno;
     private String numeroMatricula;
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "matricula_id")
+    private List<MatriculaDetalle> matriculaDetalles;
 }
